@@ -1,168 +1,6 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ari Sotiriou & Dr Ruxandra Ion | Clinical Practice</title>
-    <style>
-        /* Modern CSS Reset & Core Variables */
-        :root {
-            --primary-color: #2C3E50; /* Deep, grounding blue */
-            --accent-color: #8E44AD;  /* Calming purple */
-            --text-color: #333333;
-            --bg-color: #FAFAFA;
-            --white: #FFFFFF;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            line-height: 1.6;
-            font-size: 16px;
-        }
-
-        /* Mobile-First Layout Styling */
-        header {
-            background-color: var(--white);
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #E0E0E0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header h1 {
-            font-size: 1.4rem;
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        header p {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        section {
-            background: var(--white);
-            padding: 25px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-        }
-
-        h2 {
-            font-size: 1.25rem;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            border-left: 4px solid var(--accent-color);
-            padding-left: 10px;
-        }
-
-        p {
-            margin-bottom: 15px;
-        }
-
-        /* Interactive & Conversion Elements */
-        .cta-button {
-            display: block;
-            width: 100%;
-            background-color: var(--primary-color);
-            color: var(--white);
-            text-align: center;
-            padding: 15px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin: 20px 0;
-            transition: background-color 0.2s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-
-        .cta-button:active {
-            background-color: var(--accent-color);
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 500;
-        }
-
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #CCC;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-family: inherit;
-        }
-
-        /* Desktop Adjustments (Media Query) */
-        @media (min-width: 768px) {
-            body {
-                font-size: 18px;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            .cta-button {
-                width: auto;
-                display: inline-block;
-                padding: 12px 30px;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>Psychotherapy & Psychiatry Services</h1>
-        <p>Evidence-Based Psychological Support for Individuals and Couples</p>
-    </header>
-
-    <main>
-        <section id="welcome">
-            <h2>Our Practice</h2>
-            <p>Welcome to our clinical practice. We provide dedicated, confidential therapeutic interventions tailored to support your mental health and relational well-being.</p>
-            <a href="#contact" class="cta-button">Request an Initial Consultation</a>
-        </section>
-
-        <section id="services">
-            <h2>Therapeutic Services</h2>
-            <p>We maintain a clear distinction between our core specialisms to ensure you receive the precise modality required for your care:</p>
-            <ul>
-                <li><strong>Psychodynamic Therapy:</strong> In-depth individual and couples therapy exploring early attachment and unconscious patterns.</li>
-                <li><strong>Cognitive Behavioural Therapy (CBT):</strong> Structured, evidence-based interventions for specific symptom management.</li>
-                <li><strong>Psychiatric Consultation:</strong> Expert medical assessment and diagnostic reviews.</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Enquiry Form</h2>
-            <p>Please complete the confidential form below. We target responding to all UK and international referrals within two working days.</p>
-            
-            <form action="https://formspree.io/f/xbdbgdly" method="POST">
+<form action="https://formspree.io/f/xbdbgdly" method="POST">
                 <div class="form-group">
-                    <label prejudices="name">Your Name</label>
+                    <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required autocomplete="name">
                 </div>
                 
@@ -181,10 +19,9 @@
                     </select>
                 </div>
 
-                <!-- Strategic Inclusion for Visibility Tracking -->
                 <div class="form-group">
                     <label for="source">Source Inquiry: How did you find our clinic?</label>
-                    <select id="source" name="source" color="required">
+                    <select id="source" name="source" required>
                         <option value="">-- Please Select --</option>
                         <option value="search">Search Engine (Google/Bing)</option>
                         <option value="directory">Professional Directory (BACP/UKCP/BABCP)</option>
@@ -201,8 +38,3 @@
 
                 <button type="submit" class="cta-button" style="border: none; cursor: pointer;">Submit Secure Enquiry</button>
             </form>
-        </section>
-    </main>
-
-</body>
-</html>
